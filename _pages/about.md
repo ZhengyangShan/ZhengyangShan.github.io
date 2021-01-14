@@ -18,8 +18,12 @@ I am a graduate student at University of Michigan pursuing my master's degree in
 
 <br/><img src='/images/UM.png'>  University of Michigan - Ann Arbor
 
+* M.S. in Quantitative Finance and Risk Management
+
 <br/><img src='/images/psu.png'> The Pennsylvania State University
 
+* B.S. in Mathematics and Computational Statistics
+* Minor in Computer Science
 
 ### PUBLICATION
 
