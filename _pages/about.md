@@ -18,7 +18,7 @@ I am a graduate student at University of Michigan pursuing my master's degree in
 
 * University of Michigan - Ann Arbor
 
-* The Pennsylvania State University
+* ![image](https://github.com/Zhengyang49/Zhengyang49.github.io/blob/master/images/PSU.png) The Pennsylvania State University
 
 
 ### PUBLICATION
