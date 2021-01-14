@@ -16,7 +16,7 @@ I am a graduate student at University of Michigan pursuing my master's degree in
 
 ### EDUCATION
 
-* <br/><img src='/images/UM.png'> University of Michigan - Ann Arbor
+* <br/><img src='/images/um.png'> University of Michigan - Ann Arbor
 
 * ![image](https://github.com/Zhengyang49/Zhengyang49.github.io/blob/master/images/PSU.png) The Pennsylvania State University
 
