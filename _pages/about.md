@@ -20,6 +20,8 @@ I am a graduate student at University of Michigan pursuing my master's degree in
 
 <br/><img src='/images/psu.png'> The Pennsylvania State University
 
+<br/><img src='/images/U-M-logo-preview.jpg'>  I am a graduate student at University of Michigan pursuing my master's degree in Quantitative Finance and Risk Management. I am passionate about math, data science and programming. I
+
 
 ### PUBLICATION
 
