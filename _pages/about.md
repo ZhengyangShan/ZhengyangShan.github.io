@@ -11,8 +11,7 @@ redirect_from:
 
 ### ABOUT 
 
-I am a graduate student at University of Michigan pursuing my master's degree in Quantitative Finance and Risk Management. I am passionate about math, data science and programming.
-
+I am a first year PhD student in the Faculty of Computing and Data Sciences at Boston University. 
 
 ### EDUCATION
 
