@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Zhengyang Shan"
 title_separator          : "-"
 name                     : &name "Zhengyang Shan"
-description              : &description "Master student at the University of Michigan"
+description              : &description ""
 url                      : https://zhengyang49.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "Zhengyang49/Zhengyang49.github.io"
@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Zhengyang Shan"
   avatar           : "photo.JPG"
-  bio              : "Zhengyang Shan"
-  location         : "Ann Arbor, MI"
+  bio              : ""
+  location         : "Boston, MA"
   employer         :
   pubmed           : 
   googlescholar    : 
-  email            : "szyszy@umich.edu"
+  email            : "shanzy@bu.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -96,7 +96,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : 
+  github           : "https://github.com/Zhengyang49"
   google_plus      :
   keybase          :
   instagram        :
