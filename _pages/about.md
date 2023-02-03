@@ -15,7 +15,7 @@ I am a first year PhD student in the Faculty of Computing and Data Sciences at B
 
 ### EDUCATION
 
-<br/><img src='/images/BU.png'> Boston University
+<br/><img src='/images/BostonU.png'> Boston University
 
 <br/><img src='/images/UM.png'>  University of Michigan - Ann Arbor
 
