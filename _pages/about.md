@@ -16,10 +16,11 @@ I am a graduate student at University of Michigan pursuing my master's degree in
 
 ### EDUCATION
 
+<br/><img src='/images/bu.png'>   Boston University
+
 <br/><img src='/images/UM.png'>   University of Michigan - Ann Arbor
 
 * M.S. in Quantitative Finance and Risk Management
-* Data Science Certificate
 
 <br/><img src='/images/psu.png'>The Pennsylvania State University
 
