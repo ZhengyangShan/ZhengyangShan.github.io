@@ -14,3 +14,10 @@ author_profile: true
 {% for post in site.publications reversed %}
   {% include archive-single.html %}
 {% endfor %}
+
+
+[Nonuniqueness for a Fully Nonlinear, Degenerate Elliptic Boundary-Value Problem in Conformal Geometry](https://doi.org/10.1016/j.difgeo.2020.101688)
+
+Zhengyang Shan
+
+Differential Geometry and its Applications, 2021
