@@ -83,7 +83,8 @@ analytics:
 # Site Author
 author:
   name             : "Zhengyang Shan"
-  avatar           : "photo.JPG"
+  #avatar           : "photo.JPG"
+  avatar           : "headshot.jpg"
   bio              : ""
   location         : "Boston, MA"
   employer         :
