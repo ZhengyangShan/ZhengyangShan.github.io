@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Welcome!"
+title: "Zhengyang Shan"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
