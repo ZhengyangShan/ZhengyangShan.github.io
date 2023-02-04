@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Zhengyang Shan"
+title                    : ""
 title_separator          : "-"
 name                     : &name "Zhengyang Shan"
 description              : &description ""
