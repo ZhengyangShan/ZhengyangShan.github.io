@@ -11,7 +11,7 @@ redirect_from:
 
 ### ABOUT 
 
-I am a first year PhD student in the Faculty of Computing and Data Sciences at Boston University. My research interests are primarily in the fields of machine learning and natural language processing.
+I am a first year PhD student in the Faculty of Computing and Data Sciences at Boston University. My research interests are primarily in the fields of machine learning and natural language processing, especially regarding the influence of social media, online news outlets, and network data. 
 
 ### EDUCATION
 
