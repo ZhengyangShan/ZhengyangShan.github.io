@@ -9,9 +9,9 @@ redirect_from:
 ---
 
 
-### ABOUT 
+### **About Me**  
 
-I am a first year PhD student in the Faculty of Computing and Data Sciences at Boston University. My research interests are primarily in the fields of machine learning and natural language processing, especially regarding the influence of social media, online news outlets, and network data. 
+I am a PhD student in the [Faculty of Computing and Data Sciences](https://www.bu.edu/cds/) at Boston University, researching **natural language processing (NLP), machine learning (ML), and AI fairness**. My work focuses on **evaluating and improving large language models (LLMs), personalization in AI, and analyzing social media narratives**
 
 ### EDUCATION
 
@@ -29,7 +29,9 @@ I am a first year PhD student in the Faculty of Computing and Data Sciences at B
 
 ### PUBLICATION
 
-* [Nonuniqueness for a Fully Nonlinear, Degenerate Elliptic Boundary-Value Problem in Conformal Geometry](https://doi.org/10.1016/j.difgeo.2020.101688)
+* **Zhengyang Shan**. [Nonuniqueness for a Fully Nonlinear, Degenerate Elliptic Boundary-Value Problem in Conformal Geometry](https://doi.org/10.1016/j.difgeo.2020.101688)
 
 ### TEACHING EXPERIENCE
+📚 Boston University 
+* [CDS DS 340 - Introduction to Machine Learning and AI](https://www.bu.edu/academics/cds/courses/cds-ds-340/) *Fall 2024 & Spring 2025*
 * [CDS DS 380 - Data, Society and Ethics](https://www.bu.edu/academics/cds/courses/cds-ds-380/) *Spring 2023*
