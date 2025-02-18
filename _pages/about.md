@@ -17,15 +17,15 @@ I am a PhD student in the [Faculty of Computing and Data Sciences](https://www.b
 
 <br/><img src='/images/bu.png'>     Boston University
 
-* <sub>PhD in the Faculty of Computing and Data Sciences</sub>
+🤯 <sub>PhD in the Faculty of Computing and Data Sciences</sub>
 
 <br/><img src='/images/UM.png'>     University of Michigan - Ann Arbor
 
-* <sub>MSc in Quantitative Finance and Risk Management</sub>
+🎓 <sub>MSc in Quantitative Finance and Risk Management</sub>
 
 <br/><img src='/images/psu.png'>The Pennsylvania State University
 
-* <sub>BSc in Mathematics and Computational Statistics, minor in Computer Science</sub>
+🎓 <sub>BSc in Mathematics and Computational Statistics, minor in Computer Science</sub>
 
 ### PUBLICATION
 
