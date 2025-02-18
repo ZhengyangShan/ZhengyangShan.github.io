@@ -8,7 +8,6 @@ redirect_from:
   - /about.html
 ---
 
-
 ### **About Me**  
 
 I am a PhD student in the [Faculty of Computing and Data Sciences](https://www.bu.edu/cds/) at Boston University, researching **natural language processing (NLP), machine learning (ML), and AI fairness**. My work focuses on **evaluating and improving large language models (LLMs), personalization in AI, and analyzing social media narratives**
