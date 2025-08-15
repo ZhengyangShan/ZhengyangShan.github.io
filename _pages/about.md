@@ -10,7 +10,7 @@ redirect_from:
 
 ### **About Me**  
 
-I am a PhD student in the [Faculty of Computing and Data Sciences](https://www.bu.edu/cds/) at Boston University, researching **natural language processing (NLP), machine learning (ML), and AI fairness**. My work focuses on **evaluating and improving large language models (LLMs), personalization in AI, and analyzing social media narratives**
+I am a PhD student in the [Faculty of Computing and Data Sciences](https://www.bu.edu/cds/) at Boston University. I study fairness, interpretability, and evaluation of large language models, focusing on how demographic attributes are represented and their potential misuse.
 
 ### EDUCATION
 
@@ -32,5 +32,6 @@ I am a PhD student in the [Faculty of Computing and Data Sciences](https://www.b
 
 ### TEACHING EXPERIENCE
 📚 Boston University 
+* [RISE Practicum in Data Science](https://www.bu.edu/summer/high-school-programs/rise-internship-practicum/) *Summer 2025*
 * [CDS DS 340 - Introduction to Machine Learning and AI](https://www.bu.edu/academics/cds/courses/cds-ds-340/) *Fall 2024 & Spring 2025*
 * [CDS DS 380 - Data, Society and Ethics](https://www.bu.edu/academics/cds/courses/cds-ds-380/) *Spring 2023*
