@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Zhengyang Shan</title>
+<meta name="description" content="PhD Candidate at Boston University. Fairness, interpretability, and evaluation of LLMs." />
+<meta name="keywords" content="Zhengyang Shan, Boston University, PhD">
+<link rel="canonical" href="https://zhengyangshan.github.io/personal-site/" />
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Zhengyang Shan | PhD Candidate at BU">
+<meta property="og:description" content="Fairness, interpretability, and evaluation of LLMs.">
+<meta property="og:url" content="https://zhengyangshan.github.io/personal-site/">
+<meta property="og:image" content="https://zhengyangshan.github.io/personal-site/images/headshot.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Font Awesome icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+<!-- Modern web font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Favicon -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%91%3C/text%3E%3C/svg%3E">
+
+<style>
+  :root{
+    --bg:#ffffff; --text:#0f172a; --muted:#64748b;
+    --line:rgba(15,23,42,.09); --card:rgba(255,255,255,.78);
+    --chip: rgba(255,255,255,.72); --shadow:0 14px 36px rgba(15,23,42,.08);
+    --brand:#059669; --brand-dark:#047857; --brand-soft:#ecfdf5;
+    --accent1:#d1fae5; --accent2:#bbf7d0; --accent3:#a7f3d0;
+    --soft:#f8fafc;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0; scroll-behavior:smooth}
+  body{font-family:"Plus Jakarta Sans", Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:var(--text); background:var(--bg); line-height:1.55}
+  a{color:var(--brand); text-underline-offset:3px}
+  a:hover{color:var(--brand-dark)}
+
+  /* Header */
+  .site-header{position:sticky; top:0; z-index:50; background:rgba(255,255,255,.72);
+    backdrop-filter:blur(14px); border-bottom:1px solid var(--line)}
+  .header-inner{max-width:1200px;margin:0 auto; padding:0 20px; min-height:64px;
+    display:flex; align-items:center; justify-content:space-between}
+  .brand{font-weight:800; text-decoration:none; letter-spacing:.1px; color:var(--text)}
+  .nav a{margin-left:18px; text-decoration:none; color:var(--muted); font-size:14px; font-weight:650}
+  .nav a:hover{color:var(--brand)}
+  @media (max-width:720px){ .header-inner{align-items:flex-start; flex-direction:column; padding:12px 20px}.nav{display:flex; flex-wrap:wrap; gap:10px}.nav a{margin-left:0} }
+
+  /* Hero */
+  .hero{position:relative; overflow:hidden; padding:68px 0 38px}
+  .waves{position:absolute; inset:0; z-index:-2;
+    background: radial-gradient(1000px 420px at 10% 20%, var(--accent1), transparent 62%),
+               radial-gradient(1050px 460px at 88% 18%, var(--accent2), transparent 60%),
+               linear-gradient(135deg, #f0fdf4, #dcfce7 46%, #ecfdf5)}
+  .hero-inner{max-width:1200px; margin:0 auto; padding:0 20px;
+    display:grid; grid-template-columns:340px 1fr; gap:28px; align-items:stretch}
+  @media (max-width:980px){ .hero-inner{grid-template-columns:1fr} }
+
+  /* Cards */
+  .card{background:var(--card); border:1px solid var(--line); border-radius:28px;
+    box-shadow:var(--shadow); padding:24px}
+  .profile-card{display:flex; flex-direction:column; justify-content:center}
+  .intro-card{padding:30px 32px}
+  .lift{transition:transform .25s cubic-bezier(.2,.6,.2,1), box-shadow .25s, border-color .25s}
+  .lift:hover{transform:translateY(-4px); box-shadow:0 18px 46px rgba(15,23,42,.12); border-color:rgba(5,150,105,.22)}
+
+  /* Avatar */
+  .avatar-wrap{width:210px; height:210px; border-radius:999px; overflow:hidden;
+    border:10px solid rgba(255,255,255,.82); margin:6px auto 16px}
+  .avatar{width:100%; height:100%; object-fit:cover; transform:scale(1);
+    transition:transform .35s ease}
+  .avatar-wrap:hover .avatar{transform:scale(1.06)}
+
+  /* Text sizes */
+  .name{font-size:32px; line-height:1.1; margin:10px 0 6px; font-weight:800; letter-spacing:-.03em}
+  .role{margin:0; color:var(--muted); font-weight:700}
+  .org{margin:.25rem 0 0; color:var(--muted); font-size:15px}
+  .eyebrow{display:inline-flex; align-items:center; width:max-content; max-width:100%; padding:8px 12px;
+    border-radius:999px; background:rgba(236,253,245,.9); color:var(--brand-dark);
+    border:1px solid rgba(5,150,105,.18); font-size:13px; font-weight:800; letter-spacing:.02em; margin-bottom:14px}
+
+  /* Social icons */
+  .social{display:flex; gap:12px; margin-top:20px}
+  .icon-btn{display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px;
+    border-radius:999px; border:1px solid var(--line); background:rgba(255,255,255,.55); box-shadow:none; font-size:20px; color:var(--text); text-decoration:none}
+  .icon-btn:hover{box-shadow:0 8px 18px rgba(15,23,42,.12); color:var(--brand); border-color:rgba(5,150,105,.24)}
+
+  .intro{font-size:19px; line-height:1.68; margin:0}
+  .intro .strong{font-weight:800; color:var(--brand-dark); text-decoration:none; border-bottom:1px solid rgba(5,150,105,.28)}
+  .muted{color:var(--muted); font-size:18px}
+
+  .h2{font-size:28px; font-weight:800; margin:0 0 14px; letter-spacing:-.025em}
+
+  /* Interests / Education titles */
+  #interests.h2, #education.h2{font-size:19px; margin-top:20px; margin-bottom:10px}
+
+  .chips{display:flex; flex-wrap:nowrap; gap:8px; padding:0; margin:0}
+  .chip{list-style:none; padding:7px 10px; border-radius:999px; background:rgba(255,255,255,.7);
+    border:1px solid var(--line); font-weight:700; font-size:13px; white-space:nowrap; color:#334155}
+  @media (max-width:720px){ .chips{flex-wrap:wrap;} }
+
+  .section{padding:42px 0}
+  .container{max-width:1200px; margin:0 auto; padding:0 20px}
+  #benchmarks, #teaching{background:linear-gradient(180deg, var(--soft), #ffffff)}
+
+  /* Education lines */
+  .edu-line{display:flex; align-items:flex-start; gap:8px; padding:7px 0; border-bottom:1px dashed var(--line)}
+  .edu-line:last-child{border-bottom:none}
+  .edu-emoji{font-size:17px; line-height:1.3}
+  .edu-text{font-size:15px; color:#334155}
+  .edu-text .school{font-weight:650; color:var(--text)}
+
+  /* Benchmark datasets and news */
+  .benchmark-grid{display:grid; grid-template-columns:1fr; gap:14px; width:100%}
+  @media (max-width:860px){ .benchmark-grid{grid-template-columns:1fr} }
+  .benchmark-item {
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.82);
+  }
+  .benchmark-title{margin:0 0 8px; font-size:19px; line-height:1.3; letter-spacing:-.015em}
+  .benchmark-desc{margin:10px 0 0; color:#475569; font-size:15px}
+  .tags{display:flex; flex-wrap:wrap; gap:7px; margin:10px 0 4px}
+  .tag{font-size:12px; font-weight:750; color:var(--brand-dark); background:var(--brand-soft); border:1px solid rgba(5,150,105,.15); border-radius:999px; padding:5px 8px}
+  .link-row{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
+
+  .news-item {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 16px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.65);
+    align-items: start;
+  }
+
+  .news-item time {
+    color: var(--muted);
+    white-space: nowrap;
+    margin-top: 2px;
+  }
+
+  .news-item > div {
+    margin-top: 0;
+  }
+
+  .news-title {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.3;
+  }
+
+  .news-item p {
+    margin: 6px 0 0;
+  }
+
+  .center {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  /* Publications */
+  .pub{border:1px solid var(--line); border-radius:18px; padding:16px 18px; background:rgba(255,255,255,.76); margin-bottom:11px}
+  .pub-title{font-weight:800; font-size:19px; line-height:1.3; letter-spacing:-.015em; margin:0 0 6px; color:var(--text)}
+  .pub-authors{margin:0 0 4px; color:#475569; font-size:15px; line-height:1.38}
+  .pub-venue{margin:0; color:var(--muted); font-size:14.5px; line-height:1.38; font-style:italic}
+  .pub-actions{display:flex; flex-wrap:wrap; gap:8px; margin-top:9px}
+  .btn{display:inline-flex; align-items:center; gap:7px; padding:7px 11px; border-radius:999px;
+    border:1px solid rgba(5,150,105,.22); background:#fff; text-decoration:none; font-weight:750; font-size:13.5px; color:var(--brand-dark)}
+  .btn:hover{background:var(--brand-soft); border-color:rgba(5,150,105,.35); color:var(--brand-dark)}
+
+  details{margin-top:8px}
+  details summary{cursor:pointer; list-style:none}
+  details summary::-webkit-details-marker{display:none}
+  .summary-row{display:flex; align-items:center; gap:7px; color:var(--brand-dark); font-size:14px}
+  .summary-row .caret{transition:transform .25s}
+  details[open] .caret{transform:rotate(90deg)}
+  .abstract-text{margin-top:7px; color:#475569; font-size:15px; line-height:1.56}
+
+  .cards{display:block}
+  .card-plain{border:1px solid var(--line); border-radius:18px; padding:16px; background:rgba(255,255,255,.76)}
+  .list{margin:8px 0 0 18px}
+  .teaching a {text-decoration: none}
+
+  .me {
+    font-weight: 800;
+    color: var(--brand-dark);
+  }
+
+  .award {
+    font-weight: 800;
+    color: #d97706;
+    margin-left: 8px;
+    text-decoration:none;
+  }
+
+  .conf {
+    color: var(--muted);
+    font-style: italic;
+  }
+
+</style>
+</head>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Zhengyang Shan",
+  "jobTitle": "PhD Candidate",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "Boston University"
+  },
+  "url": "https://zhengyangshan.github.io/personal-site/",
+  "image": "https://zhengyangshan.github.io/personal-site/images/headshot.jpg",
+  "sameAs": [
+    "https://github.com/ZhengyangShan",
+    "https://www.linkedin.com/in/zhengyang-shan-92b5381aa",
+    "https://www.bu.edu/cds-faculty/profile/zhengyang-shan/"
+  ],
+  "knowsAbout": ["LLM fairness", "interpretability", "model evaluation", "NLP", "AI"]
+}
+</script>
+
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#top">Zhengyang Shan</a>
+    <nav class="nav">
+      <a href="#news">News</a>
+      <a href="#benchmarks">Benchmark Datasets</a>
+      <a href="#publications">Selected Publications</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#services">Services</a>
+    </nav>
+  </div>
+</header>
+
+<main class="hero">
+  <div class="waves" aria-hidden="true"></div>
+  <div class="hero-inner">
+
+    <!-- LEFT -->
+    <section class="card lift profile-card">
+      <div class="avatar-wrap">
+        <img class="avatar" src="images/headshot.jpg" alt="Zhengyang Shan headshot" />
+      </div>
+      <h1 class="name">Zhengyang Shan</h1>
+      <p class="role">PhD Candidate</p>
+      <p class="org">Boston University (CDS)</p>
+
+      <div class="social">
+        <a class="icon-btn" href="https://scholar.google.com/citations?user=aeWAG5QAAAAJ&hl=en" title="Google Scholar" aria-label="Google Scholar">
+          <i class="fas fa-graduation-cap"></i>
+        </a>
+        <a class="icon-btn" href="https://www.linkedin.com/in/zhengyang-shan-92b5381aa" title="LinkedIn" aria-label="LinkedIn" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a class="icon-btn" href="mailto:shanzy@bu.edu" title="Email" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a class="icon-btn" href="https://github.com/ZhengyangShan" title="GitHub" aria-label="GitHub" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a class="icon-btn" href="https://x.com/ZhengyangShan" title="X (Twitter)" aria-label="X (Twitter)" target="_blank">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- RIGHT -->
+    <section class="card lift intro-card">
+      <p class="intro">
+        I am a PhD candidate in the
+        <a class="strong" href="https://www.bu.edu/cds/">Faculty of Computing &amp; Data Sciences</a>
+        at Boston University and currently an ML Research Intern at
+        <a class="strong" href="https://labs.scale.com" target="_blank" rel="noreferrer">Scale AI</a>.
+        My research focuses on large language model evaluation, interpretability, and AI safety,
+        with particular interests in understanding model behavior, mitigating bias and fairness issues,
+        and improving the reliability of agentic AI systems.
+      </p>
+
+      <div id="interests" class="h2">Interests</div>
+      <ul class="chips" role="list">
+        <li class="chip">LLM Fairness & Inclusivity</li>
+        <li class="chip">AI Safety</li>
+        <li class="chip">Interpretability</li>
+        <li class="chip">Evaluation</li>
+        <li class="chip">LLMs Personalization</li>
+      </ul>
+
+      <div id="education" class="h2">Education</div>
+
+      <div class="edu-line">
+        <div class="edu-emoji">🤯</div>
+        <div class="edu-text">
+          <span class="school">Boston University</span> —
+          <em>PhD in the Faculty of Computing and Data Sciences</em>
+        </div>
+      </div>
+
+      <div class="edu-line">
+        <div class="edu-emoji">🎓</div>
+        <div class="edu-text">
+          <span class="school">University of Michigan — Ann Arbor</span> —
+          <em>MSc in Quantitative Finance and Risk Management</em>
+        </div>
+      </div>
+
+      <div class="edu-line">
+        <div class="edu-emoji">🎓</div>
+        <div class="edu-text">
+          <span class="school">The Pennsylvania State University</span> —
+          <em>BSc in Mathematics and Computational Statistics, minor in Computer Science</em>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<!-- News -->
+<section id="news" class="section">
+  <div class="container">
+    <div class="h2">News</div>
+
+    <div class="news-item lift" style="margin-bottom:10px">
+      <time>2026</time>
+      <div>
+        <h3 class="news-title">More exciting news coming soon!</h3>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Benchmark Datasets -->
+<section id="benchmarks" class="section">
+  <div class="container">
+    <div class="h2">Benchmark Datasets</div>
+
+    <div class="benchmark-grid">
+      <article class="benchmark-item lift">
+        <h3 class="benchmark-title">ASPI: Ambiguous-State Prompt Injection Benchmark</h3>
+        <div class="tags">
+          <span class="tag">Prompt Injection</span>
+          <span class="tag">LLM Agents</span>
+          <span class="tag">AI Safety</span>
+        </div>
+        <p class="benchmark-desc">
+          A benchmark of 728 task–attack scenarios for evaluating whether LLM agents become
+          more vulnerable to prompt injection when they ask clarifying questions on ambiguous tasks.
+          I contributed to this dataset as a co-first author.
+        </p>
+        <div class="link-row">
+          <a class="btn" href="https://arxiv.org/pdf/2605.17324" target="_blank" rel="noreferrer">📄 Paper</a>
+          <a class="btn" href="https://github.com/scaleapi/aspi" target="_blank" rel="noreferrer">💻 GitHub</a>
+          <a class="btn" href="https://huggingface.co/datasets/ScaleAI/aspi" target="_blank" rel="noreferrer">🤗 Dataset</a>
+          <a class="btn" href="https://labs.scale.com/papers/aspi" target="_blank" rel="noreferrer">🌐 Post</a>
+        </div>
+      </article>
+
+      <article class="benchmark-item lift">
+        <h3 class="benchmark-title">Global-PIQA-Nonparallel: Multilingual Commonsense Reasoning Benchmark</h3>
+        <div class="tags">
+          <span class="tag">Multilingual</span>
+          <span class="tag">Commonsense Reasoning</span>
+          <span class="tag">Evaluation</span>
+        </div>
+        <p class="benchmark-desc">
+          A large-scale multilingual benchmark for reasoning and commonsense evaluation.
+        </p>
+        <div class="link-row">
+          <a class="btn" href="https://arxiv.org/abs/2510.24081" target="_blank" rel="noreferrer">📄 Paper</a>
+          <a class="btn" href="https://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel" target="_blank" rel="noreferrer">🤗 Dataset</a>
+          <a class="btn" href="https://x.com/mrl_workshop/status/1983562063612887093" target="_blank" rel="noreferrer">🐦 Twitter/X</a>
+          <a class="btn" href="https://bsky.app/profile/mrl-workshop.bsky.social/post/3m4dsfodhcc23" target="_blank" rel="noreferrer">🌐 BlueSky</a>
+        </div>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+<!-- Publications -->
+<section id="publications" class="section">
+  <div class="container">
+    <div class="h2">Selected Publications</div>
+
+    <!-- Paper 1: Stylometric footprint -->
+    <article class="pub lift">
+      <h3 class="pub-title">AI Writers Have a Consistent Stylometric Footprint, but AI Editors Do Not</h3>
+      <p class="pub-authors"><span class="me">Zhengyang Shan</span>*, Yukyung Lee*, Sophie Hao <span style="color:var(--muted)">(* equal contribution)</span></p>
+      <p class="pub-venue">Conference on Empirical Methods in Natural Language Processing (EMNLP), 2026</p>
+
+      <div class="pub-actions">
+        <a class="btn" href="https://arxiv.org/abs/2608.27855" target="_blank" rel="noreferrer">PDF</a>
+        <a class="btn" href="https://github.com/ZhengyangShan/GEN-stylometric-footprint" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> GitHub</a>
+        <a class="btn" href="https://huggingface.co/datasets/szyszy/GEN" target="_blank" rel="noreferrer">🤗 Dataset</a>
+      </div>
+
+      <details>
+        <summary>
+          <div class="summary-row">
+            <span class="caret">▶</span>
+            <strong>Abstract</strong>
+          </div>
+        </summary>
+        <p class="abstract-text">
+          Text generated by large language models (LLMs) has been shown to be stylometrically distinct from human-written text. But LLMs are increasingly used not only to generate text but also to edit human writing, and it is unclear whether the two leave the same trace. We show that AI generation leaves a consistent “stylometric footprint”: a small subset of features, primarily entropy and lexical diversity, consistently separates AI-generated text from human writing across 8 LLMs and 5 domains, while the remaining features depend heavily on the domain and generator. AI editing, however, does not reproduce the same footprint. Relative to their human-written sources, AI-edited texts show only a small increase in lexical diversity and a decrease in entropy, rather than the joint increase that characterizes AI generation. Lexical density, which contributes little to generation, instead becomes the dominant editing-associated signal. Stylometric features therefore separate AI-edited text from AI-generated text but are substantially less effective at separating it from human-written text. Our results suggest that “AI text” is not a single phenomenon: generation and editing leave qualitatively different stylometric traces and should be studied separately.
+        </p>
+      </details>
+    </article>
+
+    <!-- Paper 2: Mechanistic -->
+    <article class="pub lift">
+      <h3 class="pub-title">Measuring Mechanistic Independence: Can Bias Be Removed Without Erasing Demographics?</h3>
+      <p class="pub-authors"><span class="me">Zhengyang Shan</span>, Aaron Mueller</p>
+      <p class="pub-venue">European Chapter of the Association for Computational Linguistics (EACL), 2026</p>
+
+      <div class="pub-actions">
+        <a class="btn" href="https://arxiv.org/abs/2512.20796" target="_blank" rel="noreferrer">PDF</a>
+      </div>
+
+      <details>
+        <summary>
+          <div class="summary-row">
+            <span class="caret">▶</span>
+            <strong>Abstract</strong>
+          </div>
+        </summary>
+        <p class="abstract-text">
+          We investigate how independent demographic bias mechanisms are from general demographic recognition in language models.
+          Using a multi-task evaluation setup where demographics are associated with names, professions, and education levels,
+          we measure whether models can be debiased while preserving demographic detection capabilities.
+          We compare attribution-based and correlation-based methods for locating bias features.
+          We find that targeted sparse autoencoder feature ablations in Gemma-2-9B reduce bias without degrading recognition performance:
+          attribution-based ablations mitigate race and gender profession stereotypes while preserving name recognition accuracy,
+          whereas correlation-based ablations are more effective for education bias.
+          Qualitative analysis further reveals that removing attribution features in education tasks induces “prior collapse”,
+          thus increasing overall bias. This highlights the need for dimension-specific interventions.
+          Overall, our results show that demographic bias arises from task-specific mechanisms rather than absolute demographic markers,
+          and that mechanistic inference-time interventions can enable surgical debiasing without compromising core model capabilities.
+        </p>
+      </details>
+    </article>
+
+    <!-- Paper 3: GIFI -->
+    <article class="pub lift">
+      <h3 class="pub-title">Gender Inclusivity Fairness Index (GIFI): A Multilevel Framework for Evaluating Gender Diversity in Large Language Models</h3>
+      <p class="pub-authors"><span class="me">Zhengyang Shan</span>, Emily Diana, Jiawei Zhou</p>
+      <p class="pub-venue">Association for Computational Linguistics (ACL), 2025</p>
+
+      <div class="pub-actions">
+        <a class="btn" href="https://aclanthology.org/2025.acl-long.128/" target="_blank" rel="noreferrer">PDF</a>
+        <a class="btn" href="https://github.com/ZhengyangShan/GIFI" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> GitHub</a>
+      </div>
+
+      <details>
+        <summary>
+          <div class="summary-row">
+            <span class="caret">▶</span>
+            <strong>Abstract</strong>
+          </div>
+        </summary>
+        <p class="abstract-text">
+          We present a comprehensive evaluation of gender fairness in large language models (LLMs), focusing on their ability to handle both binary and non-binary genders.
+          While previous studies primarily focus on binary gender distinctions, we introduce the Gender Inclusivity Fairness Index (GIFI),
+          a novel and comprehensive metric that quantifies the diverse gender inclusivity of LLMs.
+          GIFI consists of a wide range of evaluations at different levels, from simply probing the model with respect to provided gender pronouns
+          to testing various aspects of model generation and cognitive behaviors under different gender assumptions, revealing biases associated with varying gender identifiers.
+          We conduct extensive evaluations with GIFI on 22 prominent open-source and proprietary LLMs of varying sizes and capabilities,
+          discovering significant variations in LLMs’ gender inclusivity.
+          Our study highlights the importance of improving LLMs’ inclusivity, providing a critical benchmark for future advancements in gender fairness in generative models.
+        </p>
+      </details>
+    </article>
+
+    <!-- Paper 4: Climate Change -->
+    <article class="pub lift">
+      <h3 class="pub-title">Insights into Climate Change Narratives: Emotional Alignment and Engagement Analysis on TikTok</h3>
+      <p class="pub-authors">Ge Gao, <span class="me">Zhengyang Shan</span>, James Crissman, Ekaterina Novozhilova, YuCheng Huang, Arti Ramanathan, Margrit Betke, Derry Wijaya</p>
+      <p class="pub-venue">Fourth Workshop on NLP for Positive Impact (NLP4PI), 2025
+        <a class="award" href="https://www.bu.edu/cs/2025/08/04/hariri-ai-and-emerging-media-research-team-s-tiktok-climate-change-narrative-study-wins-best-paper-at-acl-2025-for/" target="_blank" rel="noreferrer">🏆 Best Paper Award</a>
+      </p>
+
+      <div class="pub-actions">
+        <a class="btn" href="https://aclanthology.org/2025.nlp4pi-1.11.pdf" target="_blank" rel="noreferrer">PDF</a>
+      </div>
+
+      <details>
+        <summary>
+          <div class="summary-row">
+            <span class="caret">▶</span>
+            <strong>Abstract</strong>
+          </div>
+        </summary>
+        <p class="abstract-text">
+          TikTok has emerged as a key platform for discussing polarizing topics, including climate change.
+          Despite its growing influence, there is limited research exploring how content features shape emotional alignment between video
+          creators and audience comments, as well as their impact on user engagement.
+          Using a combination of pretrained and fine-tuned textual and visual models, we analyzed 7,110 TikTok videos related to climate change,
+          focusing on content features such as semantic clustering of video transcriptions, visual elements, tonal shifts, and detected emotions.
+          Our findings reveal that positive emotions and videos featuring factual content or vivid environmental visuals exhibit stronger emotional alignment.
+          Furthermore, emotional intensity and tonal coherence in video speech are significant predictors of higher engagement levels,
+          offering new insights into the dynamics of climate change communication on social media.
+          Our preference learning analysis reveals that comment emotions play a dominant role in predicting video shareability,
+          with both positive and negative emotional responses acting as key drivers of content diffusion.
+          We conclude that user engagement—particularly emotional discourse in comments—significantly shapes climate change content shareability.
+        </p>
+      </details>
+    </article>
+
+    <!-- Paper 5: Conformal geometry -->
+    <article class="pub lift">
+      <h3 class="pub-title">Nonuniqueness for a Fully Nonlinear, Degenerate Elliptic Boundary-Value Problem in Conformal Geometry</h3>
+      <p class="pub-authors"><span class="me">Zhengyang Shan</span></p>
+      <p class="pub-venue">Differential Geometry and its Applications, 2021</p>
+
+      <div class="pub-actions">
+        <a class="btn" href="https://www.sciencedirect.com/science/article/pii/S0926224520300978" target="_blank" rel="noreferrer">PDF</a>
+      </div>
+
+      <details>
+        <summary>
+          <div class="summary-row">
+            <span class="caret">▶</span>
+            <strong>Abstract</strong>
+          </div>
+        </summary>
+        <p class="abstract-text">
+          One way to generalize the boundary Yamabe problem posed by Escobar is to ask if a given metric on a compact manifold with boundary
+          can be conformally deformed to have vanishing σ_k-curvature in the interior and constant H_k-curvature on the boundary.
+          When restricting to the closure of the positive k-cone, this is a fully nonlinear degenerate elliptic boundary value problem
+          with fully nonlinear Robin-type boundary condition.
+          We prove nonuniqueness for the boundary-value problem σ_4-curvature equals zero and constant H_4-curvature by using bifurcation results
+          proven by Case, Moreira and Wang.
+          Our construction via products of sphere and hyperbolic space only works for a finite set of dimensions.
+        </p>
+      </details>
+    </article>
+
+  </div>
+</section>
+
+<!-- Teaching -->
+<section id="teaching" class="section">
+  <div class="container">
+    <div class="h2">Teaching Experience</div>
+
+    <div class="cards">
+      <div class="card-plain lift">
+        <p style="margin:0;font-weight:800">📚 Boston University</p>
+        <ul class="list">
+          <li>
+            <a href="https://www.bu.edu/summer/high-school-programs/rise-internship-practicum/" target="_blank" rel="noreferrer">
+              RISE Practicum in Data Science
+            </a>
+            — <em>Summer 2025</em>
+          </li>
+
+          <li>
+            <a href="https://www.bu.edu/academics/cds/courses/cds-ds-340/" target="_blank" rel="noreferrer">
+              CDS DS 340 — Introduction to Machine Learning and AI
+            </a>
+            — <em>Fall 2024 &amp; Spring 2025</em>
+          </li>
+
+          <li>
+            <a href="https://www.bu.edu/academics/cds/courses/cds-ds-380/" target="_blank" rel="noreferrer">
+              CDS DS 380 — Data, Society and Ethics
+            </a>
+            — <em>Spring 2023</em><br>
+            <span style="color: var(--muted); font-size: 16px;">
+              Participated in the development of the
+              <a href="https://www.bu.edu/cds-faculty/culture-community/gaia-policy/" target="_blank" rel="noreferrer">
+                Gaia Policy
+              </a>
+              on responsible AI and data ethics.
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="section">
+  <div class="container">
+    <div class="h2">Services</div>
+
+    <div class="cards">
+      <div class="card-plain lift">
+        <p style="margin:0;font-weight:800">🗓️ Organizer</p>
+        <ul class="list">
+          <li>
+            <a href="https://nemiconf.github.io/summer26/" target="_blank" rel="noreferrer">
+              The 3rd New England Mechanistic Interpretability (NEMI) Workshop
+            </a>
+          </li>
+        </ul>
+
+        <p style="margin:14px 0 0;font-weight:800">📝 Reviewer</p>
+        <ul class="list">
+          <li>
+            <a href="https://fagen-workshop.github.io/" target="_blank" rel="noreferrer">
+              ICML 2026 Workshop FAGEN
+            </a>
+          </li>
+
+          <li>
+            <a href="https://blackboxnlp.github.io/2026/" target="_blank" rel="noreferrer">
+              EMNLP 2026 Workshop BlackboxNLP
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="section" style="border-top:1px solid var(--line);">
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+    <div>© <span id="year"></span> Zhengyang Shan</div>
+    <div style="display:flex;gap:12px;color:var(--muted)">
+      <a href="https://github.com/ZhengyangShan" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/zhengyang-shan-92b5381aa" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a href="mailto:shanzy@bu.edu">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
