@@ -131,15 +131,28 @@
   .tag{font-size:12px; font-weight:750; color:var(--brand-dark); background:var(--brand-soft); border:1px solid rgba(5,150,105,.15); border-radius:999px; padding:5px 8px}
   .link-row{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
 
+  .news-scroll {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.65);
+    padding: 0 20px;
+    max-height: 132px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
   .news-item {
     display: grid;
     grid-template-columns: 140px 1fr;
     gap: 16px;
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 16px 20px;
-    background: rgba(255, 255, 255, 0.65);
+    padding: 14px 0;
     align-items: start;
+  }
+
+  .news-item + .news-item { border-top: 1px solid var(--line); }
+
+  @media (max-width: 560px) {
+    .news-item { grid-template-columns: 1fr; gap: 4px; }
   }
 
   .news-item time {
@@ -156,6 +169,7 @@
     margin: 0;
     font-size: 17px;
     line-height: 1.3;
+    font-weight: 400;
   }
 
   .news-item p {
@@ -283,8 +297,7 @@
       <p class="intro">
         I am a PhD candidate in the
         <a class="strong" href="https://www.bu.edu/cds/">Faculty of Computing &amp; Data Sciences</a>
-        at Boston University and currently an ML Research Intern at
-        <a class="strong" href="https://labs.scale.com" target="_blank" rel="noreferrer">Scale AI</a>.
+        at Boston University.
         My research focuses on large language model evaluation, interpretability, and AI safety,
         with particular interests in understanding model behavior, mitigating bias and fairness issues,
         and improving the reliability of agentic AI systems.
@@ -334,24 +347,26 @@
   <div class="container">
     <div class="h2">News</div>
 
-    <div class="news-item lift" style="margin-bottom:10px">
-      <time>Oct 2026</time>
-      <div>
-        <h3 class="news-title">I will join Center for AI Safety as a research intern this fall</h3>
+    <div class="news-scroll">
+      <div class="news-item">
+        <time>Oct 2026</time>
+        <div>
+          <h3 class="news-title">I will join Center for AI Safety as a research intern this fall</h3>
+        </div>
       </div>
-    </div>
 
-    <div class="news-item lift" style="margin-bottom:10px">
-      <time>Oct 2026</time>
-      <div>
-        <h3 class="news-title">Invited talk at <a href="https://sdaia.gov.sa/en/Sectors/Ncai/Pages/default.aspx" target="_blank" rel="noreferrer">NCAI</a></h3>
+      <div class="news-item">
+        <time>Oct 2026</time>
+        <div>
+          <h3 class="news-title">Invited talk at <a href="https://sdaia.gov.sa/en/Sectors/Ncai/Pages/default.aspx" target="_blank" rel="noreferrer">NCAI</a></h3>
+        </div>
       </div>
-    </div>
 
-    <div class="news-item lift" style="margin-bottom:10px">
-      <time>May 2026</time>
-      <div>
-        <h3 class="news-title">I will join Scale AI as an ML research intern this summer</h3>
+      <div class="news-item">
+        <time>May 2026</time>
+        <div>
+          <h3 class="news-title">I will join Scale AI as an ML research intern this summer</h3>
+        </div>
       </div>
     </div>
 
